@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+<div class="form-group">
+	{!! Form::label('${1:field_name}', lang('${2:lang_key}', '${3:lang_default_value}')) !!}
+	{!! Form::select('${1:field_name}', ${4:options}, set_value(${5:data}, '${1:field_name}'), ['class' => 'form-control']) !!}
+	{!! $errors->first('${1:field_name}', '<p class="help-block warning">:message</p>') !!}
+</div>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>f:s</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!--<scope>source.php</scope>-->
+</snippet>

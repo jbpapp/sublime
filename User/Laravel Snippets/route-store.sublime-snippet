@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+// Route to ${1:path} to store a newly created resource in storage.		
+post('${1:path}', [
+	'as' => '${1/\//./g}.store',
+	'uses' => '${1/^(\w)|(?:\/(\w))/(?1\u$1:)(?2\\\u$2:)/g}Controller@store'
+]);
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>r:st</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

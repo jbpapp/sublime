@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+// Route to ${1:path} to display a listing of the resource
+get('${1:path}', [
+	'as' => '${1/\//./g}.index',
+	'uses' => '${1/^(\w)|(?:\/(\w))/(?1\u$1:)(?2\\\u$2:)/g}Controller@index'
+]);
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>r:i</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

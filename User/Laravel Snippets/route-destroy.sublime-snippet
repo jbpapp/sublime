@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+// Route to ${1:path}/{id} to remove the specified resource from storage	
+delete('${1:path}/{id}', [
+	'as' => '${1/\//./g}.destroy',
+	'uses' => '${1/^(\w)|(?:\/(\w))/(?1\u$1:)(?2\\\u$2:)/g}Controller@destroy'
+]);
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>r:d</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

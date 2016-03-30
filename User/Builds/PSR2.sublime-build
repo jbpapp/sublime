@@ -1,0 +1,3 @@
+{
+	"shell_cmd": "/home/jpapp/.composer/vendor/bin/php-cs-fixer fix $file --level=psr2"
+}

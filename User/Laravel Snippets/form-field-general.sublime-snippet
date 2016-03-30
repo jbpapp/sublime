@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+<div class="form-group {{ (\$errors->has('${1:field_name}') ? 'has-error' : '') }}">
+	<label for="${1:field_name}" class="control-label">
+        ${2:label_title}
+    </label>
+    <input type="${4:type}" name="${1:field_name}" value="{{ set_value(\$${5:data}, '${1:field_name}') }}" class="form-control" />
+	{!! \$errors->first('${1:field_name}', '<p class="help-block error-block">:message</p>') !!}	
+</div>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>f:fs</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!--<scope>source.php</scope>-->
+</snippet>
